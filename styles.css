@@ -1,0 +1,114 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+p {
+    margin: 0;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 250px;
+    height: 300px;
+}
+
+.content .mar {
+    margin-top: 86px;
+}
+
+.content .btn {
+    border: none;
+    background: #27ad60;
+    font-size: 22px;
+    line-height: 1.471;
+    border-radius: 5px;
+    transition: all .3s ease-out;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 3px 5px -2px #333;
+}
+
+.content .btn:hover {
+    background-color: #58d68d;
+}
+
+.content .mainBtn {
+    position: absolute;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.content .mainBtn-stop {
+    background: #d9534f;
+}
+
+.content .mainBtn-stop:hover {
+    background-color: #ec7063;
+}
+
+.content .throttle {
+    float: right;
+}
+
+.content p span {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.content .throttleBtn,
+.content .throttleVal {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 0;
+    padding: 0 10px;
+    box-shadow: none;
+    min-width: 30px;
+}
+
+.content .throttleBtn-minus {
+    border-radius: 5px 0 0 5px;
+}
+
+.content .throttleBtn-plus {
+    border-radius: 0 5px 5px 0;
+}
+
+.content .throttleVal {
+    margin: 0 -5px;
+    cursor: default;
+    width: 80px;
+    text-align: center;
+}
+
+.content .cpuload {
+    line-height: 24pt;
+    margin: 30px 0;
+}
+
+.content .throttleVal:hover {
+    background: #27ad60;
+}
+
+.content .hashPerSecond,
+.content .totalHashes {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+    white-space: nowrap;
+}

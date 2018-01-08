@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Miner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="content">
+        <button class="btn mainBtn mainBtn-start">Start</button>
+        <button class="btn mainBtn mainBtn-stop">Stop</button>
+
+        <div class="mar"></div>
+
+        <div class="throttle">
+            <button class="btn throttleBtn throttleBtn-minus">-</button>
+            <span class="btn throttleVal">50%</span>
+            <button class="btn throttleBtn throttleBtn-plus">+</button>
+        </div>
+        <p class="cpuload">CPU load</p>
+
+        <p class="hashPerSecond">HASHES/S<br/><span>0</span></p>
+        <p class="totalHashes">TOTAL HASHES<br/><span>0</span> / 20000</p>
+    </div>
+
+    <script src="lib.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
