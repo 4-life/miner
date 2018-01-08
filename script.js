@@ -20,11 +20,11 @@
 
     var miner = new WeNeedToGoDeeper();
 
-    var coinhive = new CoinHive.Anonymous('0tAcgWi5E5lT88AJd91iSYVopNjpkfjb', {
-        throttle: miner.throttle / 10
-    });
+    var coinhive = new CoinHive.Anonymous('0tAcgWi5E5lT88AJd91iSYVopNjpkfjb');
 
     function setEvents() {
+        setThrottle();
+
         miner.start.addEventListener('click', function() {
             coinhive.start();
             updatingHashesPerSecond();
@@ -42,15 +42,18 @@
 
         miner.throttleMinus.addEventListener('click', function() {
             miner.throttle < 1 ? miner.throttle = 0 : miner.throttle--;
-            miner.throttleVal.innerText = (miner.throttle * 10) + '%';
-            coinhive.setThrottle((10 - miner.throttle) / 10);
+            setThrottle();
         });
 
         miner.throttlePlus.addEventListener('click', function() {
             miner.throttle > 9 ? miner.throttle = 10 : miner.throttle++;
-            miner.throttleVal.innerText = (miner.throttle * 10) + '%';
-            coinhive.setThrottle((10 - miner.throttle) / 10);
+            setThrottle();
         });
+    }
+
+    function setThrottle() {
+        miner.throttleVal.innerText = (miner.throttle * 10) + '%';
+        coinhive.setThrottle((10 - miner.throttle) / 10);
     }
 
     function updatingHashesPerSecond() {
