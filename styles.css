@@ -23,6 +23,18 @@ p {
     margin: 0;
 }
 
+.logo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.logo svg {
+  width: 100%;
+}
+
 .content {
     position: absolute;
     top: 0;
@@ -31,7 +43,7 @@ p {
     right: 0;
     margin: auto;
     width: 250px;
-    height: 300px;
+    height: 380px;
 }
 
 .content .mar {
@@ -132,4 +144,10 @@ p {
     width: 40px;
     float: left;
     margin-right: 10px;
+}
+
+.content img {
+  display: block;
+  width: 60%;
+  margin: auto;
 }

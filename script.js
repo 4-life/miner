@@ -8,7 +8,7 @@
             'cpu_load': 'CPU load',
             'hash_per_sec': 'HASHES/S',
             'total': 'TOTAL HASHES',
-            'error_adguard': 'Error! AdBlock or antivirus block mining. Please, turn them off'
+            'error_adguard': 'Error! AdBlock or antivirus block mining. Please, turn them off and try again'
         },
         'ru': {
             'start': 'Начать',
@@ -16,7 +16,7 @@
             'cpu_load': 'Нагрузка на ЦП',
             'hash_per_sec': 'ХЭШ/СЕК',
             'total': 'ВСЕГО ХЭШЕЙ',
-            'error_adguard': 'Ошибка! AdBlock или антивирус блокируют майнинг. Пожалуйста, отключите их'
+            'error_adguard': 'Ошибка! AdBlock или антивирус блокируют майнинг. Пожалуйста, отключите их и повторите попытку'
         }
     };
 
@@ -99,8 +99,11 @@
             }
 
             if (miner.countError > 5) {
+                miner.countError = 0;
                 miner.error.style.display = 'block';
                 stopUpdating();
+            } else {
+                miner.error.style.display = 'none';
             }
             miner.hashPerSecond.innerText = coinhive.getHashesPerSecond().toFixed(1);
         }, 1000);
